@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!--devicon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <!--Navigation Bar-->
+        <nav class="navbar-container">
+            <h1>Portfolio</h1>
+            <div class="tags">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="container">
+            <div class="home-content">
+                <p class="home-intro">Hello!, I'm</p>
+                <h1 class="home-title">Mary <span>Wanjiru</span></h1>
+                <h2 class="home-subtitle">Aspiring Software Developer</h2>
+                <p class="home-description">I am an Information Technology student passionate about technology, web development and creating solutions through programming</p>
+
+                <div class="home-buttons">
+                    <a href="#projects" class="btn btn-primary">View my work</a>
+                    <a href="./assets/Mary Wanjiru Kariuki.pdf" class="btn btn-secondary" download>Download CV</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+
+            <!-- Home Image -->
+            <div class="home-image">
+                <div class="image-container">
+                    <img src="mary.jpeg" alt="Mary Wanjiru Kariuki">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--About section-->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <p>GET TO KNOW ME</p>
+                <h2 class="section-title">About Me</h2>
+                <p class="about-description">I am a passionate and dedicated Information Technology student in my second year at Kirinyaga University with a strong interest in web development and programming. I enjoy creating innovative solutions through coding and continuously learning new technologies to enhance my skills. My goal is to contribute to impactful projects and grow as a software developer.</p>
+
+                <p>My goal is to become a skilled software developer, build meaningful digital solutions and continuously grow in the technology industry.</p>
+
+                <a href="#contact" class="btn btn-primary">Let's Connect</a>
+            </div>
+
+            <div class="about-details">
+                <div class="detail">
+                    <strong>Full Name:</strong>
+                    <span>Mary Wanjiru Kariuki</span>
+                </div>
+                <div class="detail">
+                    <strong>University:</strong>
+                    <span>Kirinyaga University</span>
+                </div>
+                <div class="detail">
+                    <strong>Year of Study:</strong>
+                    <span>Second Year</span>
+                </div>
+                <div class="detail">
+                    <strong>Field of Study:</strong>
+                    <span>Bsc Information Technology</span>
+                </div>
+                <div class="detail">
+                    <strong>Email:</strong>
+                    <span>marykaris721@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <p>What I am Learning</p>
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                    <p>Web pages and applications</p>
+                </div>
+
+                <div class="skill">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                    <p>Styling and layout of web pages</p>
+                </div>
+
+                <div class="skill">
+                    <i class="fab fa-js-square"></i>
+                    <h3>JavaScript</h3>
+                    <p>Interactive web elements and functionality</p>
+                </div>
+
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Management</h3>
+                    <p>Databases Fundamentals</p>
+                </div>
+
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Programming Language for web development, automation and data analysis</p>
+                </div>
+
+                <div class="skill">
+                    <i class="devicon-c-plain"></i>
+                    <h3>C Language</h3>
+                    <p>Programming Language for system programming and embedded systems</p>
+                </div>
+
+                <div class="skill">
+                    <i class="devicon-cplusplus-plain"></i>
+                    <h3>C++</h3>
+                    <p>Object Oriented Programming Language for software development and game development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <p>My recent Work</p>
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="portfolio.jpeg" alt="Personal Portfolio Website">
+                    </div>
+
+                    <div class="project-content">
+                        <h3>Project 1: Personal Portfolio Website</h3>
+                        <p>Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills, projects, and contact information. Implemented responsive design and interactive features.</p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="#">View Project</a>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="number.jpeg" alt="Project number system converter">
+                    </div>
+                    <div class="project-content">
+                        <h3>Project 2: Number System Converter</h3>
+                        <p>Created a number system converter application that allows users to convert numbers between different bases (binary, decimal, octal, hexadecimal).</p>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Number Systems</span>
+                        <span>Responsive Design</span>
+                    </div>
+
+                    <a href="https://marykaris721-sudo.github.io/number-system-converter/">View Project</a>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!--education-->
+    <section class="education" id="education">
+        <div class="container">
+            <p>My Educational Background</p>
+            <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Bachelor of Science in Information Technology</h3>
+                <h4>Kirinyaga University</h4>
+                <span>2025 - Present</span>
+                <p>Pursuing a Bachelor's degree in Information Technology, focusing on web development, programming, and software engineering.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Kenya Certificate of Secondary Education (KCSE)</h3>
+                <h4>Rungiri Secondary School</h4>
+                <span>2020 - 2023</span>
+                <p>Completed secondary education with a strong foundation in mathematics, science, and computer studies.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Kenya Certificate of Primary Education (KCPE)</h3>
+                <h4>Kangemi Primary School</h4>
+                <span>2012 - 2019</span>
+                <p>Completed primary education with a focus on core subjects, laying the groundwork for future academic pursuits.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--services-->
+    <section class="services" id="services">
+        <div class="container">
+            <p>What I Offer</p>
+            <h2 class="section-title">Services</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Building responsive and user-friendly websites using HTML, CSS, and JavaScript.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-database"></i>
+                <h3>Database Management</h3>
+                <p>Designing and managing databases to ensure efficient data storage and retrieval.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile App Development</h3>
+                <p>Creating mobile applications for Android and iOS platforms using modern frameworks.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive user interfaces and enhancing user experiences for web and mobile applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--contact-->
+    <section class="contact" id="contact">
+        <div class="container">
+            <p>Get in Touch</p>
+            <h2 class="section-title">Contact Me</h2>
+        </div>
+
+        <div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-socials">
+                <h3>Connect With Me</h3>
+
+                <div class="social-links">
+                    <a href="https://github.com/marykaris721-sudo" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/mary-wanjiru-194879371" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/marykaris35?psln=MWlpcnJiNzcwZmwwdQ==" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/share/1E5VYRKgvs/" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@mary.karis09?_r=1&_t=ZS-9BJ7ABXrNJA" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="mailto:marykaris721@gmail.com" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+                    <a href="https://wa.me/254768004498" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p>&copy; 2026 Mary Wanjiru. All Rights Reserved.</p>
+
+            <a href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
