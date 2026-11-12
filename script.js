@@ -1,12 +1,5 @@
-// ============================================
-// PORTFOLIO — script.js
-// ============================================
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ==========================================
-    // 1. SMOOTH SCROLL (with sticky header offset)
-    // ==========================================
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', e => {
             const id = link.getAttribute('href');
@@ -24,9 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ==========================================
-    // 2. ACTIVE NAV LINK ON SCROLL
-    // ==========================================
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -50,9 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setActiveLink();
 
 
-    // ==========================================
-    // 3. SCROLL REVEAL ANIMATION
-    // ==========================================
     const revealEls = document.querySelectorAll(
         '.skill, .project-card, .service-card, .timeline-item, .about-details'
     );
@@ -71,9 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => observer.observe(el));
 
 
-    // ==========================================
-    // 4. STAGGERED DELAY FOR GRIDS
-    // ==========================================
     [
         { sel: '.skills-grid',   item: '.skill' },
         { sel: '.projects-grid', item: '.project-card' },
@@ -88,9 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ==========================================
-    // 5. HEADER SHADOW ON SCROLL
-    // ==========================================
     const header = document.querySelector('.header');
 
     function toggleHeaderShadow() {
@@ -101,9 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleHeaderShadow();
 
 
-    // ==========================================
-    // 6. CONTACT FORM VALIDATION
-    // ==========================================
     const form = document.querySelector('.contact-form form');
 
     if (form) {
@@ -145,9 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // ==========================================
-    // 7. TYPING EFFECT ON HOME SUBTITLE
-    // ==========================================
     const subtitle = document.querySelector('.home-subtitle');
 
     if (subtitle) {
@@ -189,9 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // ==========================================
-    // 8. BACK TO TOP BUTTON
-    // ==========================================
     const topBtn = document.createElement('button');
     topBtn.className = 'back-to-top';
     topBtn.setAttribute('aria-label', 'Back to top');
@@ -207,12 +179,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ==========================================
-    // 9. DYNAMIC YEAR IN FOOTER
-    // ==========================================
     const footerText = document.querySelector('.footer p');
     if (footerText) {
         footerText.textContent = `© ${new Date().getFullYear()} Mary Wanjiru. All Rights Reserved.`;
+    }
+
+
+    const CV_PATH = 'mary-cv.pdf';
+
+    document.querySelectorAll('a[download]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+
+            const a = document.createElement('a');
+            a.href = CV_PATH;
+            a.download = 'Mary Wanjiru Kariuki - CV.pdf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            showToast('CV download started ✓');
+        });
+    });
+
+    const downloadBtn = document.querySelector('a[download]');
+    if (downloadBtn) {
+        if (!document.getElementById('view-cv-btn')) {
+            const viewBtn = document.createElement('a');
+            viewBtn.href = CV_PATH;
+            viewBtn.target = '_blank';
+            viewBtn.rel = 'noopener noreferrer';
+            viewBtn.className = 'btn btn-secondary';
+            viewBtn.id = 'view-cv-btn';
+            viewBtn.textContent = 'View CV';
+
+            downloadBtn.parentNode.insertBefore(viewBtn, downloadBtn.nextSibling);
+        }
+    }
+
+    function showToast(text) {
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = text;
+        document.body.appendChild(toast);
+
+        requestAnimationFrame(() => toast.classList.add('show'));
+
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 300);
+        }, 2500);
     }
 
 });
